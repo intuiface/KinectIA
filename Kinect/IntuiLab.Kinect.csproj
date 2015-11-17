@@ -202,7 +202,6 @@
     <Content Include="IntuiLab.Kinect.PosturesOrders.png" />
     <Content Include="IntuiLab.Kinect.Settings.png" />
     <Content Include="kinect_ico_32.png" />
-    <Content Include="ReadMe.txt" />
     <Content Include="Resources\kinect_lock.png" />
     <None Include="IntuiLab.Kinect.General.dax" />
     <None Include="IntuiLab.Kinect.Gesture.dax" />
