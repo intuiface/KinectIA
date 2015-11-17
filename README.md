@@ -1,5 +1,8 @@
 # Kinect Interface Assets for IntuiFace
 
+**NOTE**: Microsoft Kinect for Windows v.2 is not supported and there are no plans to add support. 
+This article exists solely for those using Microsoft Kinect for Windows v.1.
+
 This project contains Microsoft Kinect Interface Assets for IntuiFace Player & IntuiFace Composer.
 
 The [Microsoft Kinect](http://www.microsoft.com/en-us/kinectforwindows/) Interface Assets enable you to control an IntuiFace experience using the Microsoft Kinect sensor. 
@@ -18,9 +21,9 @@ See more information on our support webpage: [Using Microsoft Kinect in IntuiFac
 
 # How to compile this project?
 
-The code for Kinect Interface Assets is C#.
+**PREREQUISITES**: you must have Visual Studio 2013 and .NET 4.5.1 installed.
 
-**Prerequisites**: you must have Visual Studio 2013 and .NET 4.5.1 installed.
+The code for Kinect Interface Assets is C#.
 
 To compile this project, follow these steps:
 * Open **IntuiLab.Kinect.sln** in Visual Studio 2013
