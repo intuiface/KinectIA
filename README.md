@@ -20,12 +20,12 @@ See more information on our support webpage: [Using Microsoft Kinect in IntuiFac
 
 The code for Kinect Interface Assets is C#.
 
-Prerequisites: you must have Visual Studio 2013 and .NET 4.5.1 installed.
+**Prerequisites**: you must have Visual Studio 2013 and .NET 4.5.1 installed.
 
 To compile this project, follow these steps:
-* Open IntuiLab.Kinect.sln in Visual Studio 2013
-* Build the solution in Release mode
-* Navigate to OutputAssemblies folder at the root of the project
+* Open **IntuiLab.Kinect.sln** in Visual Studio 2013
+* Build the solution in **Release** mode
+* Navigate to **OutputAssemblies** folder at the root of the project
 
 # How to use Kinect Interface Assets?
 
