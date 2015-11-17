@@ -1,0 +1,768 @@
+{
+    "kind": "discovery#restDescription",
+    "discoveryVersion": "v1",
+    "id": "pluginKinect:v2",
+    "name": "Kinect",
+    "version": "v2.3.2",
+    "title": "Plugin Kinect DLL",
+    "protocol": "dll",
+	"dependencies":["IntuiLab.Kinect.dll","Bespoke.Common.Osc.dll","Microsoft.Kinect.Toolkit.Interaction.dll"],
+	"systemDependencies":
+	[{
+		"path":"C:/Windows/System32/Kinect10.dll",
+		"errorMessage":"Requires installation of [url=http://support.intuilab.com/kb/how-to/use-microsoftr-kinectr-with-your-experiences]Kinect runtime[/url]",
+		"version":"1.7.0.529"
+	}],
+    "basePath": "IntuiLab.Kinect",
+
+    "icons" : {		
+		"x32" : "kinect_ico_32.png"
+	},
+	"schemas" :
+	{
+		"SettingsFacade" :
+		{
+			"id" : "SettingsFacade",
+			"type" : "object",
+			"title" : "Kinect Settings",
+			"description" : "Kinect settings",
+			"properties" :
+			{
+				"UseColorStream" :
+				{
+					"type" : "boolean",
+					"title" : "Use Color Stream",
+					"description" : "Color stream of Kinect sensor",
+					"readonly" : true
+				},
+				"UseDepthStream" :
+				{
+					"type" : "boolean",
+					"title" : "Use Depth Stream",
+					"description" : "Depth stream of Kinect sensor",
+					"readonly" : true
+				},
+				"UseSkeletonStream" :
+				{
+					"type" : "boolean",
+					"title" : "Use Skeleton Stream",
+					"description" : "Skeleton stream of Kinect sensor",
+					"readonly" : true
+				},
+				"Stream":
+				{
+					"type":"string",
+					"enum":["Color","Depth","None"],
+					"title":"Stream"
+				},
+				"StreamWithSkeleton" :
+				{
+					"type" : "boolean",
+					"title" : "Skeleton on stream",
+					"description" : "Display skeleton on stream"
+				},
+				"ColorStream":
+				{
+					"type":"object",
+					"title" : "Color stream",
+					"readonly":true
+				},
+				"DepthStream":
+				{
+					"type":"object",
+					"title" : "Depth stream",
+					"readonly":true
+				},
+				"SkeletonStream":
+				{
+					"type":"object",
+					"title" : "Skeleton stream",
+					"readonly":true
+				},
+				"MinDistanceToLockKinect":
+				{
+					"type" : "number",
+					"title" : "Minimal distance to lock Kinect",
+					"description" : "Minimal distance between user and kinect sensor for lock  kinect"
+				},
+				"ElevationAngleKinect" :
+				{
+					"type" : "integer",
+					"title" : "Kinect sensor elevation",
+					"minimum":-27,
+					"maximum":27,
+					"description" : "Elevation of Kinect sensor"
+				}
+			}
+		},
+		"PluginKinectFacade" :
+		{
+			"id" : "PluginKinectFacade",
+			"type" : "object",
+			"title": "People Detection",
+			"description" : "Detect user(s) in front of the sensor. Includes live sensor feed.",
+			"properties" :
+			{
+				"UserCount" : 
+				{
+					"type" : "integer", 
+					"title": "User counter",
+					"readonly":true,
+					"description" : "Number of user tracked by Kinect sensor"
+				},
+				"UserDistance" :
+				{
+					"type" : "string", 
+					"title": "User distance",
+					"readonly":true,
+					"description" : "Distance between th nearest user and the Kinect sensor"
+				}
+			}
+		},
+		"GestureFacade" :
+		{
+			"id" : "GestureFacade",
+			"type" : "object",
+			"title" : "Gestures",
+			"description" : "Hand movements including swipe, push and wave.",
+			"properties" :
+			{
+				"GestureSwipeLeftEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Gesture Swipe Left",
+					"description" : "Enable the gesture swipe left"
+				},
+				"GestureSwipeRightEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Gesture Swipe Right",
+					"description" : "Enable the gesture swipe right"
+				},
+				"GesturePushEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Gesture Push",
+					"description" : "Enable the gesture push"
+				},
+				"GestureWaveEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Gesture Wave",
+					"description" : "Enable the gesture wave"
+				},
+				"GestureGripEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Grip Gesture",
+					"description" : "Enable the detection of the grip gesture"
+				}
+			}
+
+		},
+		"PosturesLettersFacade" :
+		{
+			"id" : "PosturesLettersFacade",
+			"type" : "object",
+			"title" : "Letter Postures",
+			"description" : "Static postures using body position to form letters.",
+			"properties" :
+			{
+				"PostureAEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Posture A",
+					"description" : "Enable the posture A"
+				},
+				"TimePostureA":
+				{
+					"type" : "integer",
+					"title" : "Posture A Time",
+					"description" : "Recognition time for posture A (in s.)",
+					"readonly":true
+				},
+				"PostureTEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Posture T",
+					"description" : "Enable the posture T"
+				},
+				"TimePostureT":
+				{
+					"type" : "integer",
+					"title" : "Posture T Time",
+					"description" : "Recognition time for posture T (in s.)",
+					"readonly":true
+				},
+				"PostureUEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Posture U",
+					"description" : "Enable the posture U"
+				},
+				"TimePostureU":
+				{
+					"type" : "integer",
+					"title" : "Posture U Time",
+					"description" : "Recognition time for posture U (in s.)",
+					"readonly":true
+				},
+				"PostureVEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Posture V",
+					"description" : "Enable the posture V"
+				},
+				"TimePostureV":
+				{
+					"type" : "integer",
+					"title" : "Posture V Time",
+					"description" : "Recognition time for posture V (in s.)",
+					"readonly":true
+				}
+			}
+		},
+		"PosturesOrdersFacade" :
+		{
+			"id" : "PosturesOrdersFacade",
+			"type" : "object",
+			"title" : "Command Postures",
+			"description" : "Static postures using body position to signal commands.",
+			"properties" :
+			{
+				"PostureHomeEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Posture Home",
+					"description" : "Enable the posture home"
+				},
+				"TimePostureHome":
+				{
+					"type" : "integer",
+					"title" : "Posture Home Time",
+					"description" : "Recognition time for posture home (in s.)",
+					"readonly":true
+				},
+				"PostureStayEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Posture Stay",
+					"description" : "Enable the posture stay"
+				},
+				"TimePostureStay":
+				{
+					"type" : "integer",
+					"title" : "Posture Stay Time",
+					"description" : "Recognition time for posture stay (in s.)",
+					"readonly":true
+				},
+				"PostureWaitEnabled" :
+				{
+					"type" : "boolean",
+					"title" : "Enable Posture Wait",
+					"description" : "Enable the posture wait"
+				},
+				"TimePostureWait":
+				{
+					"type" : "integer",
+					"title" : "Posture Wait Time",
+					"description" : "Recognition time for posture wait (in s.)",
+					"readonly":true
+				}
+			}
+		},
+		"PointingFacade" :
+		{
+			"id" : "PointingFacade",
+			"type" : "object",
+			"title": "Kinect Pointing",
+			"description" : "Kinect Pointing beta version",
+			"properties" :
+			{
+				"PointingModeEnabled" : 
+				{
+					"type" : "boolean", 
+					"title": "Enable Pointing Mode",
+					"description" : "Number of user tracked by Kinect sensor"
+				},
+				"SpaceBetweenHands" :
+				{
+					"type" : "number",
+					"readonly" : true,
+					"title" : "Space Between Hands"
+				},
+				"HandsAmplitude" :
+				{
+					"type" : "number",
+					"readonly" : true,
+					"title" : "Hands Amplitude"
+				}
+			}
+		}
+	},
+	"resources" :
+	{
+		"SettingsFacade" :
+		{
+			"id" : "SettingsFacade",
+			"isExternalAsset" : "true",
+			"title" : "Kinect Settings",
+			"description" : "Kinect settings",
+			"templateDesignAccelerator":"IntuiLab.Kinect.Settings.dax",
+			"methods" : 
+			{
+				"ChangeKinectMode" :
+				{
+					"id" : "SettingsFacade.ChangeKinectMode",
+					"title" : "Change Kinect Mode",
+					"name" : "ChangeKinectMode",
+					"description" : "permit to switch between Gestures and Pointing Kinect mode"
+				}
+			},
+			"events" : 
+			{
+				"KinectPointingModeActivated" :
+				{
+					"id" : "SettingsFacade.KinectPointingModeActivated",
+					"title" : "Pointing Mode is activated",
+					"name" : "KinectPointingModeActivated"
+				},
+				"KinectGestureModeActivated" :
+				{
+					"id" : "SettingsFacade.KinectGestureModeActivated",
+					"title" : "Gestures Mode is Activated",
+					"name" : "KinectGestureModeActivated"
+				}
+			}
+		},
+		"PluginKinectFacade" :
+		{
+			"id" : "PluginKinectFacade",
+			"title": "People Detection",
+			"description" : "Detect user in front of the sensor.",
+			"isExternalAsset" : "true",
+			"templateDesignAccelerator":"IntuiLab.Kinect.General.dax",
+			"methods" : {},
+			"events" : 
+			{
+				"NoUserDetected" :
+				{
+					"id" : "PluginKinectFacade.NoUserDetected",
+					"title": "No person is detected",
+					"name":"NoUserDetected", 
+					"description" : "Raised when the last person leaves Kinect’s field of vision."	
+				},
+				"OnePersonDetected" :
+				{
+					"id" : "PluginKinectFacade.OnePersonDetected",
+					"title": "One person is detected",
+					"name":"OnePersonDetected", 
+					"description" : "Raised when one person enters Kinect’s field of vision."
+				}
+			}
+		},
+		"GestureFacade" :
+		{
+			"id" : "GestureFacade",
+			"isExternalAsset" : "true",
+			"title" : "Gestures",
+			"description" : "Hand movements including swipe, push and wave.",
+			"templateDesignAccelerator":"IntuiLab.Kinect.Gesture.dax",
+			"methods" : {},
+			"events" :
+			{
+				"SwipeLeftDetected" :
+				{
+					"id" : "GestureFacade.SwipeLeftDetected",
+					"title": "Swipe Left is detected",
+					"name":"SwipeLeftDetected", 
+					"description" : "Raised when a Swipe Left gesture is detected."	
+				},
+				"SwipeRightDetected" :
+				{
+					"id" : "GestureFacade.SwipeRightDetected",
+					"title": "Swipe Right is detected",
+					"name":"SwipeRightDetected", 
+					"description" : "Raised when a Swipe Right gesture is detected."
+				},
+				"PushDetected" :
+				{
+					"id" : "GestureFacade.PushDetected",
+					"title": "Push is detected",
+					"name":"PushDetected", 
+					"description" : "Raised when a Push gesture is detected."
+				},
+				"WaveDetected" :
+				{
+					"id" : "GestureFacade.WaveDetected",
+					"title": "Wave is detected",
+					"name":"WaveDetected", 
+					"description" : "Raised when a Wave gesture is detected."
+				},
+				"GripDetected" :
+				{
+					"id" : "GestureFacade.GripDetected",
+					"title": "Grip is detected",
+					"name":"GripDetected", 
+					"description" : "Raised when a Grip gesture is detected."
+				}
+			}
+		},
+		"PosturesLettersFacade" :
+		{
+			"id" : "PosturesLettersFacade",
+			"isExternalAsset" : "true",
+			"title" : "Letter Postures",
+			"description" : "Static postures using body position to form letters.",
+			"templateDesignAccelerator":"IntuiLab.Kinect.PosturesLetters.dax",
+			"methods" :	{},
+			"events" :
+			{
+				"PostureADetected" :
+				{
+					"id" : "PosturesLettersFacade.PostureADetected",
+					"title": "Posture A is detected",
+					"name":"PostureADetected", 
+					"description" : "Raised when Posture A is detected."
+				},
+				"PostureAProgress" :
+				{
+					"id" : "PosturesLettersFacade.PostureAProgress",
+					"title": "Posture A is in progress",
+					"name":"PostureAProgress", 
+					"description" : "Raised when Posture A detection is in progress.",
+					"properties" :
+					{
+						"Percent" :
+						{
+							"type" : "integer",
+							"title" : "Percent",
+							"description" : "Percent detection Posture A"
+						}
+					}
+				},
+				"PostureALost" :
+				{
+					"id" : "PosturesLettersFacade.PostureALost",
+					"title": "Posture A is lost",
+					"name":"PostureALost", 
+					"description" : "Raised when Posture A is lost."
+				},
+				"PostureTDetected" :
+				{
+					"id" : "PosturesLettersFacade.PostureTDetected",
+					"title": "Posture T is detected",
+					"name":"PostureTDetected", 
+					"description" : "Raised when Posture T is detected."
+				},
+				"PostureTProgress" :
+				{
+					"id" : "PosturesLettersFacade.PostureTProgress",
+					"title": "Posture T is in progress",
+					"name":"PostureTProgress", 
+					"description" : "Raised when Posture T detection is in progress.",
+					"properties" :
+					{
+						"Percent" :
+						{
+							"type" : "integer",
+							"title" : "Percent",
+							"description" : "Percent detection Posture A"
+						}
+					}
+				},
+				"PostureTLost" :
+				{
+					"id" : "PosturesLettersFacade.PostureTLost",
+					"title": "Posture T is lost",
+					"name":"PostureTLost", 
+					"description" : "Raised when Posture T is lost."
+				},
+				"PostureUDetected" :
+				{
+					"id" : "PosturesLettersFacade.PostureUDetected",
+					"title": "Posture U is detected",
+					"name":"PostureUDetected", 
+					"description" : "Raised when Posture U is detected."
+				},
+				"PostureUProgress" :
+				{
+					"id" : "PosturesLettersFacade.PostureUProgress",
+					"title": "Posture U is in progress",
+					"name":"PostureUProgress", 
+					"description" : "Raised when Posture U detection is in progress.",
+					"properties" :
+					{
+						"Percent" :
+						{
+							"type" : "integer",
+							"title" : "Percent",
+							"description" : "Percent detection Posture A"
+						}
+					}
+				},
+				"PostureULost" :
+				{
+					"id" : "PosturesLettersFacade.PostureULost",
+					"title": "Posture U is lost",
+					"name":"PostureULost", 
+					"description" : "Raised when Posture U is lost."
+				},
+				"PostureVDetected" :
+				{
+					"id" : "PosturesLettersFacade.PostureVDetected",
+					"title": "Posture V is detected",
+					"name":"PostureVDetected", 
+					"description" : "VRaised when Posture V is detected."
+				},
+				"PostureVProgress" :
+				{
+					"id" : "PosturesLettersFacade.PostureVProgress",
+					"title": "Posture V is in progress",
+					"name":"PostureVProgress", 
+					"description" : "Raised when Posture V detection is in progress.",
+					"properties" :
+					{
+						"Percent" :
+						{
+							"type" : "integer",
+							"title" : "Percent",
+							"description" : "Percent detection Posture A"
+						}
+					}
+				},
+				"PostureVLost" :
+				{
+					"id" : "PosturesLettersFacade.PostureVLost",
+					"title": "Posture V is lost",
+					"name":"PostureVLost", 
+					"description" : "Raised when Posture V is lost."
+				}
+			}
+		},
+		"PosturesOrdersFacade" :
+		{
+			"id" : "PosturesOrdersFacade",
+			"isExternalAsset" : "true",			
+			"title" : "Command Postures",
+			"description" : "Static postures using body position to signal commands.",
+			"templateDesignAccelerator":"IntuiLab.Kinect.PosturesOrders.dax",
+			"methods" :	{},
+			"events" :
+			{
+				"PostureHomeDetected" :
+				{
+					"id" : "PosturesOrdersFacade.PostureHomeDetected",
+					"title": "Posture Home is detected",
+					"name":"PostureHomeDetected", 
+					"description" : "Raised when Posture Home is detected."
+				},
+				"PostureHomeProgress" :
+				{
+					"id" : "PosturesOrdersFacade.PostureHomeDetected",
+					"title": "Posture Home is in progress",
+					"name":"PostureHomeProgress", 
+					"description" : "Raised when Posture Home detection is in progress.",
+					"properties" :
+					{
+						"Percent" :
+						{
+							"type" : "integer",
+							"title" : "Percent",
+							"description" : "Percent detection Posture A"
+						}
+					}
+				},
+				"PostureHomeLost" :
+				{
+					"id" : "PosturesOrdersFacade.PostureHomeDetected",
+					"title": "Posture Home is lost",
+					"name":"PostureHomeLost", 
+					"description" : "Raised when Posture Home is lost."
+				},
+				"PostureStayDetected" :
+				{
+					"id" : "PosturesOrdersFacade.PostureStayDetected",
+					"title": "Posture Stay is detected",
+					"name":"PostureStayDetected", 
+					"description" : "Raised when Posture Stay is detected."
+				},
+				"PostureStayProgress" :
+				{
+					"id" : "PosturesOrdersFacade.PostureStayProgress",
+					"title": "Posture Stay is in progress",
+					"name":"PostureStayProgress", 
+					"description" : "Raised when Posture Stay detection is in progress.",
+					"properties" :
+					{
+						"Percent" :
+						{
+							"type" : "integer",
+							"title" : "Percent",
+							"description" : "Percent detection Posture A"
+						}
+					}
+				},
+				"PostureStayLost" :
+				{
+					"id" : "PosturesOrdersFacade.PostureStayLost",
+					"title": "Posture Stay is lost",
+					"name":"PostureStayLost", 
+					"description" : "Raised when Posture Stay is lost."
+				},
+				"PostureWaitDetected" :
+				{
+					"id" : "PosturesOrdersFacade.PostureWaitDetected",
+					"title": "Posture Wait is detected",
+					"name":"PostureWaitDetected", 
+					"description" : "Raised when Posture Wait is detected."
+				},
+				"PostureWaitProgress" :
+				{
+					"id" : "PosturesOrdersFacade.PostureWaitProgress",
+					"title": "Posture Wait is in progress",
+					"name":"PostureWaitProgress", 
+					"description" : "Raised when Posture Wait detection is in progress.",
+					"properties" :
+					{
+						"Percent" :
+						{
+							"type" : "integer",
+							"title" : "Percent",
+							"description" : "Percent detection Posture A"
+						}
+					}
+				},
+				"PostureWaitLost" :
+				{
+					"id" : "PosturesOrdersFacade.PostureWaitLost",
+					"title": "Posture Wait is lost",
+					"name":"PostureWaitLost", 
+					"description" : "Raised when Posture Wait is lost."
+				}		
+			}
+		},
+		"PointingFacade" :
+		{
+			"id" : "PointingFacade",
+			"isExternalAsset" : "true",
+			"title" : "Hand Pointing",
+			"description" : "Direct hand pointing manipulation",
+			"templateDesignAccelerator":"IntuiLab.Kinect.Pointing.dax",
+			"methods" : {},
+			"events" : 
+			{
+				"NewHandActive" :
+				{
+					"id" : "PointingFacade.NewHandActive",
+					"title": "New hand is active",
+					"name":"NewHandActive", 
+					"description" : "Raised when a new Hand becomes active",
+					"properties" :
+					{
+						"HandID" :
+						{
+							"type" : "integer",
+							"title" : "Hand ID",
+							"description" : "Hand identification"
+						},
+						"X" :
+						{
+							"type" : "integer",
+							"title" : "Hand X Position",
+							"description" : "Hand X position on screen"
+						},
+						"Y" :
+						{
+							"type" : "integer",
+							"title" : "Hand Y Position",
+							"description" : "Hand Y position on screen"
+						}
+					}
+				},
+				"UserHandMove" :
+				{
+					"id" : "PointingFacade.UserHandMove",
+					"title": "Hand moves",
+					"name":"UserHandMove", 
+					"description" : "Raised when the hand is moved",
+					"properties" :
+					{
+						"HandID" :
+						{
+							"type" : "integer",
+							"title" : "Hand ID",
+							"description" : "Hand identification"
+						},
+						"X" :
+						{
+							"type" : "integer",
+							"title" : "Hand X Position",
+							"description" : "Hand X position on screen"
+						},
+						"Y" :
+						{
+							"type" : "integer",
+							"title" : "Hand Y Position",
+							"description" : "Hand Y position on screen"
+						},
+						"IsGrip" :
+						{
+							"type" : "boolean",
+							"title" : "Hand is gripped",
+							"readonly" : true
+						}
+					}
+				},
+				"UserHandLost" :
+				{
+					"id" : "PointingFacade.UserHandLost",
+					"title": "Hand is lost",
+					"name":"UserHandLost", 
+					"description" : "Raised when the hand is lost from view",
+					"properties" :
+					{
+						"HandID" :
+						{
+							"type" : "integer",
+							"title" : "Hand ID",
+							"description" : "Hand identification"
+						}
+					}
+				},
+				"UserHandGrip" :
+				{
+					"id" : "PointingFacade.UserHandGrip",
+					"title": "Hand is gripped",
+					"name":"UserHandGrip", 
+					"description" : "Raised when the hand is gripped",
+					"properties" :
+					{
+						"HandID" :
+						{
+							"type" : "integer",
+							"title" : "Hand ID",
+							"description" : "Hand identification"
+						}
+					}
+				},
+				"UserHandGripReleased" :
+				{
+					"id" : "PointingFacade.UserHandGripReleased",
+					"title": "Hand grip is released",
+					"name":"UserHandGripReleased", 
+					"description" : "Raised when the hand grip is released",
+					"properties" :
+					{
+						"HandID" :
+						{
+							"type" : "integer",
+							"title" : "Hand ID",
+							"description" : "Hand identification"
+						}
+					}
+				}
+			}
+		}
+	}
+}

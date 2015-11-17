@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mashup ApiNumber="12" Name="IntuiLab.Kinect.General" Description="" Category="Kinect" Author="IntuiLab" AuthorId="IntuiLab" Icon="IntuiLab.Kinect.General.png" OriginalLocalPath=".\Local" OriginalDataPath=".\Data" OriginalProcessID="11480">
+  <MashupSpace ContextAlias="CURRENT_SPACE" Name="mashup_root_0" OriginalAbsoluteVisualPath="player://visuals/Project 343/Space 1">
+    <Space Name="Space 1" AutoReset="false" BackgroundColor="#FF000000" />
+  </MashupSpace>
+  <MashupCollection Name="mashup_root_1" OriginalAbsoluteVisualPath="player://visuals/Project 343/Space 1/Middle/Default_template_for_Kinect_People_Detection" CreateAsCollectionSibling="true">
+    <Collection Name="Default_template_for_Kinect_People_Detection" Visual="Group" Style="" Container="Static" ContainerStyle="">
+      <Properties>
+        <Property Type="Container" Name="MinWidth"><![CDATA[value:100]]></Property>
+        <Property Type="Container" Name="MinHeight"><![CDATA[value:100]]></Property>
+        <Property Type="Container" Name="MaxWidth"><![CDATA[value:4000]]></Property>
+        <Property Type="Container" Name="MaxHeight"><![CDATA[value:4000]]></Property>
+        <Property Type="Container" Name="X"><![CDATA[value:1742]]></Property>
+        <Property Type="Container" Name="Y"><![CDATA[value:256]]></Property>
+        <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+        <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+        <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        <Property Type="Container" Name="IsVisible"><![CDATA[value:True]]></Property>
+        <Property Type="Container" Name="Width"><![CDATA[value:340]]></Property>
+        <Property Type="Visual" Name="InitialWidth"><![CDATA[value:340]]></Property>
+        <Property Type="Container" Name="Height"><![CDATA[value:499]]></Property>
+        <Property Type="Visual" Name="InitialHeight"><![CDATA[value:499.531598328226]]></Property>
+      </Properties>
+      <Asset Name="Background" Visual="DefaultRectangle" Style="" Container="Default" ContainerStyle="" Domain="value:Rectangle">
+        <Properties>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="MinimizedWidth"><![CDATA[value:50]]></Property>
+          <Property Type="Container" Name="MinimizedHeight"><![CDATA[value:50]]></Property>
+          <Property Type="Container" Name="DisplayButtonsRadius"><![CDATA[value:19]]></Property>
+          <Property Type="Visual" Name="BorderThickness"><![CDATA[value:1]]></Property>
+          <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FF000000]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:330]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:369]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:170]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:261]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="Header_background" Visual="DefaultRectangle" Style="" Container="Default" ContainerStyle="" Domain="value:Rectangle">
+        <Properties>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="MinimizedWidth"><![CDATA[value:50]]></Property>
+          <Property Type="Container" Name="MinimizedHeight"><![CDATA[value:50]]></Property>
+          <Property Type="Container" Name="DisplayButtonsRadius"><![CDATA[value:19]]></Property>
+          <Property Type="Visual" Name="BorderThickness"><![CDATA[value:1]]></Property>
+          <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FF3B3A3A]]></Property>
+          <Property Type="Visual" Name="BorderColor"><![CDATA[value:#FF3B3A3A]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:340]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:82]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:170]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:42]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="Footer_background" Visual="DefaultRectangle" Style="" Container="Default" ContainerStyle="" Domain="value:Rectangle">
+        <Properties>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedWidth"><![CDATA[value:50]]></Property>
+          <Property Type="Container" Name="MinimizedHeight"><![CDATA[value:50]]></Property>
+          <Property Type="Container" Name="DisplayButtonsRadius"><![CDATA[value:19]]></Property>
+          <Property Type="Visual" Name="BorderThickness"><![CDATA[value:1]]></Property>
+          <Property Type="Visual" Name="BackgroundColor"><![CDATA[value:#FF3B3A3A]]></Property>
+          <Property Type="Visual" Name="BorderColor"><![CDATA[value:#FF3B3A3A]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:82]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:340]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:170]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:458]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="Title" Visual="DefaultText" Style="" Container="Scale" ContainerStyle="" Domain="value:Text">
+        <Properties>
+          <Property Type="Container" Name="Height"><![CDATA[value:39]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:285]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:47]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:523]]></Property>
+          <Property Type="Visual" Name="FontColor"><![CDATA[value:#FF83D3F6]]></Property>
+          <Property Type="Visual" Name="Font"><![CDATA[value:Microsoft Sans Serif]]></Property>
+          <Property Type="Domain" Name="Text"><![CDATA[value:Kinect People Detection]]></Property>
+          <Property Type="Visual" Name="FontSize"><![CDATA[value:28]]></Property>
+        </Properties>
+      </Asset>
+      <Collection Name="Group_general" Visual="Group" Style="" Container="No resize" ContainerStyle="">
+        <Properties>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:320]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:320]]></Property>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Visual" Name="InitialWidth"><![CDATA[value:320]]></Property>
+          <Property Type="Visual" Name="InitialHeight"><![CDATA[value:320]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:170]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:254]]></Property>
+        </Properties>
+        <Asset Name="Image_for_user_not_present" Visual="DefaultImage" Style="" Container="Default" ContainerStyle="" Domain="value:Image">
+          <Properties>
+            <Property Type="Domain" Name="Source"><![CDATA[player://resources/bad1389f-c509-47ee-a3cf-bb58c21ff37e]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:320]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:240]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:160]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:120]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Image_for_user_present" Visual="DefaultImage" Style="" Container="Default" ContainerStyle="" Domain="value:Image">
+          <Properties>
+            <Property Type="Domain" Name="Source"><![CDATA[player://resources/410293d2-aed4-47cd-be9a-2fd0bae6055a]]></Property>
+            <Property Type="Container" Name="Width"><![CDATA[value:320]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:240]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:160]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:120]]></Property>
+            <Property Type="Container" Name="IsVisible"><![CDATA[value:False]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Text_for_user_count" Visual="DefaultText" Style="" Container="No resize" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Container" Name="Width"><![CDATA[value:163]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:50]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:19]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:171]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:277]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:User Count:]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Right]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Microsoft Sans Serif]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Text_for_&lt;UserCount&gt;" Visual="DefaultText" Style="" Container="No resize" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Container" Name="Width"><![CDATA[value:31]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:50]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Segoe UI]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:19]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:290]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:276]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[mashup://externals/People%20Detection/UserCount]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Right]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Microsoft Sans Serif]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Text_for_distance_to_closest_user" Visual="DefaultText" Style="" Container="No resize" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Container" Name="Width"><![CDATA[value:219]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:50]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:19]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:142]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:310]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[value:Distance to Closest User:]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Right]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Microsoft Sans Serif]]></Property>
+          </Properties>
+        </Asset>
+        <Asset Name="Text_for_&lt;UserDistance&gt;" Visual="DefaultText" Style="" Container="No resize" ContainerStyle="" Domain="value:Text">
+          <Properties>
+            <Property Type="Container" Name="Width"><![CDATA[value:67]]></Property>
+            <Property Type="Container" Name="Height"><![CDATA[value:49]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Segoe UI]]></Property>
+            <Property Type="Visual" Name="FontSize"><![CDATA[value:19]]></Property>
+            <Property Type="Container" Name="X"><![CDATA[value:282]]></Property>
+            <Property Type="Container" Name="Y"><![CDATA[value:309]]></Property>
+            <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+            <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+            <Property Type="Domain" Name="Text"><![CDATA[mashup://externals/People%20Detection/UserDistance]]></Property>
+            <Property Type="Visual" Name="Alignment"><![CDATA[value:Right]]></Property>
+            <Property Type="Visual" Name="Font"><![CDATA[value:Microsoft Sans Serif]]></Property>
+          </Properties>
+        </Asset>
+      </Collection>
+    </Collection>
+  </MashupCollection>
+  <MashupExternalAsset ContextAlias="ASSOCIATED_IA">
+    <ExternalAsset Name="People Detection" DescriptorPath="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.ifd" ExternalAssetName="PluginKinectFacade">
+      <Attachments>
+        <EventTrigger EventType="Domain" EventName="OnePersonDetected">
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_People_Detection/Group_general/Image_for_user_not_present/" Type="Container" Name="Hide" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bHideWithAnimation" Value="value:False" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_People_Detection/Group_general/Image_for_user_present/" Type="Container" Name="Show" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bShowWithAnimation" Value="value:False" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="NoUserDetected">
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_People_Detection/Group_general/Image_for_user_present/" Type="Container" Name="Hide" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bHideWithAnimation" Value="value:False" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_People_Detection/Group_general/Image_for_user_not_present/" Type="Container" Name="Show" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bShowWithAnimation" Value="value:False" />
+          </InvokeService>
+        </EventTrigger>
+      </Attachments>
+      <Dependencies>
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.ifd" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.dll" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Bespoke.Common.Osc.dll" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Microsoft.Kinect.Toolkit.Interaction.dll" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/kinect_ico_32.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.General.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.Gesture.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.Pointing.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.PosturesLetters.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.PosturesOrders.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.Settings.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Birds.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Butterfly.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureA_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureA_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureA_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureHome_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureHome_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureHome_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureStay_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureStay_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureStay_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureT_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureT_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureT_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureU_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureU_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureU_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureV_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureV_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureV_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureWait_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureWait_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureWait_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePush_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePush_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneSwipeLeft_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneSwipeLeft_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneSwipeRight_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneSwipeRight_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneWave_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneWave_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Dandelion.jpg" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Gates.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Island.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/kinect_lock.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/LeftHandClosedUser1.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/LeftHandClosedUser2.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/LeftHandOpenedUser1.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/LeftHandOpenedUser2.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ProgressBar_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ProgressBar_none.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/RightHandClosedUser1.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/RightHandClosedUser2.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/RightHandOpenedUser1.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/RightHandOpenedUser2.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/User_Not_Present.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/User_Present.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Video.wmv" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Wheel.png" Length="-1" />
+      </Dependencies>
+    </ExternalAsset>
+  </MashupExternalAsset>
+  <MashupResource>
+    <Resource Key="bad1389f-c509-47ee-a3cf-bb58c21ff37e" Type="uri" Length="9175" LastModificationDate="2015-03-16T10:46:04Z" DefaultValue="player://data/Images/User_Not_Present.png" />
+  </MashupResource>
+  <MashupResource>
+    <Resource Key="410293d2-aed4-47cd-be9a-2fd0bae6055a" Type="uri" Length="9363" LastModificationDate="2015-03-16T10:46:04Z" DefaultValue="player://data/Images/User_Present.png" />
+  </MashupResource>
+</Mashup>

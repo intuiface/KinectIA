@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{480445EE-1EC0-4471-AA70-99C40438E81E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntuiLab.Kinect</RootNamespace>
+    <AssemblyName>IntuiLab.Kinect</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bespoke.Common.Osc">
+      <HintPath>packages\Bespoke.Common.Osc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Kinect">
+      <HintPath>packages\Microsoft.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kinect.Toolkit">
+      <HintPath>packages\Microsoft.Kinect.Toolkit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Kinect.Toolkit.Interaction">
+      <HintPath>packages\Microsoft.Kinect.Toolkit.Interaction.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataRecording\DataUserRecorder.cs" />
+    <Compile Include="DataRecording\DataUserReplay.cs" />
+    <Compile Include="DataUserTracking\DataPointing\HandData.cs" />
+    <Compile Include="DataUserTracking\DataPointing\UserDataPointing.cs" />
+    <Compile Include="DataUserTracking\Events\HandEventArgs.cs" />
+    <Compile Include="DataUserTracking\Events\UserGestureDetectedEventArgs.cs" />
+    <Compile Include="DataUserTracking\Events\NewSkeletonEventArgs.cs" />
+    <Compile Include="DataUserTracking\SkeletonData.cs" />
+    <Compile Include="DataUserTracking\UserData.cs" />
+    <Compile Include="DummyKinectInteraction\DummyInteractionClient.cs" />
+    <Compile Include="Enums\PluginKinectEnum.cs" />
+    <Compile Include="Events\GestureDetectedEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\NewDebugLogEventArgs.cs" />
+    <Compile Include="Events\SpeechRecognizerResultEventArgs.cs" />
+    <Compile Include="Events\SynchronizeDataKinectEventArgs.cs" />
+    <Compile Include="Events\UserHandEventArgs.cs" />
+    <Compile Include="Exceptions\KinectException.cs" />
+    <Compile Include="Facades\GestureFacade.cs" />
+    <Compile Include="Facades\PluginKinectFacade.cs" />
+    <Compile Include="Facades\PointingFacade.cs" />
+    <Compile Include="Facades\PosturesOrdersFacade.cs" />
+    <Compile Include="Facades\PosturesLettersFacade.cs" />
+    <Compile Include="Facades\SettingsFacade.cs" />
+    <Compile Include="GestureRecognizer\GestureRecognizerManager.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Maximize\MaximizeCondition.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Maximize\MaximizeGestureChecker.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Minimize\MinimizeCondition.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Minimize\MinimizeGestureChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\A\PostureAChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\A\PostureACondition.cs" />
+    <Compile Include="GestureRecognizer\Postures\Home\PostureHomeChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\Home\PostureHomeCondition.cs" />
+    <Compile Include="GestureRecognizer\Postures\Stay\PostureStayChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\Stay\PostureStayCondition.cs" />
+    <Compile Include="GestureRecognizer\Postures\T\PostureTChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\T\PostureTCondition.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Push\PushCondition.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Push\PushGestureChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\U\PostureUChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\U\PostureUCondition.cs" />
+    <Compile Include="GestureRecognizer\Postures\V\PostureVChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\V\PostureVCondition.cs" />
+    <Compile Include="GestureRecognizer\Postures\Wait\PostureWaitChecker.cs" />
+    <Compile Include="GestureRecognizer\Postures\Wait\PostureWaitCondition.cs" />
+    <Compile Include="Events\UserCounterChangedEventArgs.cs" />
+    <Compile Include="GestureRecognizer\Condition.cs" />
+    <Compile Include="GestureRecognizer\GestureChecker.cs" />
+    <Compile Include="GestureRecognizer\Checker.cs" />
+    <Compile Include="GestureRecognizer\GesturesEventArgs.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Swipe\SwipeCondition.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Swipe\SwipeGestureChecker.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Wave\WaveGestureChecker.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Wave\WaveLeftCondition.cs" />
+    <Compile Include="GestureRecognizer\Gestures\Wave\WaveRightCondition.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Module\KinectFrameManager.cs" />
+    <Compile Include="Module\KinectGestureManager.cs" />
+    <Compile Include="Module\KinectModule.cs" />
+    <Compile Include="Module\KinectToolsManager.cs" />
+    <Compile Include="Module\KinectUserManager.cs" />
+    <Compile Include="PluginKinect.cs" />
+    <Compile Include="PropertiesPluginKinect.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TUIO\CursorsKinect\TuioCursor.cs" />
+    <Compile Include="TUIO\CursorsKinect\TuioKinect.cs" />
+    <Compile Include="TUIO\TuioManager.cs" />
+    <Compile Include="Utils\CurrentMillis.cs" />
+    <Compile Include="Utils\DebugLog.cs" />
+    <Compile Include="Utils\Feedback.cs" />
+    <Compile Include="Utils\SkeletonMath.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\DefaultAssets\DefaultMinimized.png" />
+    <Content Include="Data\Images\Birds.png" />
+    <Content Include="Data\Images\Butterfly.png" />
+    <Content Include="Data\Images\ConsignePostureA_detected.png" />
+    <Content Include="Data\Images\ConsignePostureA_idle.png" />
+    <Content Include="Data\Images\ConsignePostureA_progress.png" />
+    <Content Include="Data\Images\ConsignePostureHome_detected.png" />
+    <Content Include="Data\Images\ConsignePostureHome_idle.png" />
+    <Content Include="Data\Images\ConsignePostureHome_progress.png" />
+    <Content Include="Data\Images\ConsignePostureStay_detected.png" />
+    <Content Include="Data\Images\ConsignePostureStay_idle.png" />
+    <Content Include="Data\Images\ConsignePostureStay_progress.png" />
+    <Content Include="Data\Images\ConsignePostureT_detected.png" />
+    <Content Include="Data\Images\ConsignePostureT_idle.png" />
+    <Content Include="Data\Images\ConsignePostureT_progress.png" />
+    <Content Include="Data\Images\ConsignePostureU_detected.png" />
+    <Content Include="Data\Images\ConsignePostureU_idle.png" />
+    <Content Include="Data\Images\ConsignePostureU_progress.png" />
+    <Content Include="Data\Images\ConsignePostureV_detected.png" />
+    <Content Include="Data\Images\ConsignePostureV_idle.png" />
+    <Content Include="Data\Images\ConsignePostureV_progress.png" />
+    <Content Include="Data\Images\ConsignePostureWait_detected.png" />
+    <Content Include="Data\Images\ConsignePostureWait_idle.png" />
+    <Content Include="Data\Images\ConsignePostureWait_progress.png" />
+    <Content Include="Data\Images\ConsignePush_detected.png" />
+    <Content Include="Data\Images\ConsignePush_idle.png" />
+    <Content Include="Data\Images\ConsigneSwipeLeft_detected.png" />
+    <Content Include="Data\Images\ConsigneSwipeLeft_idle.png" />
+    <Content Include="Data\Images\ConsigneSwipeRight_detected.png" />
+    <Content Include="Data\Images\ConsigneSwipeRight_idle.png" />
+    <Content Include="Data\Images\ConsigneWave_detected.png" />
+    <Content Include="Data\Images\ConsigneWave_idle.png" />
+    <Content Include="Data\Images\Dandelion.jpg" />
+    <Content Include="Data\Images\Gates.png" />
+    <Content Include="Data\Images\Island.png" />
+    <Content Include="Data\Images\LeftHandOpenedUser1.png" />
+    <Content Include="Data\Images\LeftHandOpenedUser2.png" />
+    <Content Include="Data\Images\ProgressBar_detected.png" />
+    <Content Include="Data\Images\ProgressBar_none.png" />
+    <Content Include="Data\Images\RightHandOpenedUser1.png" />
+    <Content Include="Data\Images\RightHandOpenedUser2.png" />
+    <Content Include="Data\Images\User_Not_Present.png" />
+    <Content Include="Data\Images\User_Present.png" />
+    <Content Include="Data\Images\Wheel.png" />
+    <Content Include="Data\Videos\Video.wmv" />
+    <Content Include="IntuiLab.Kinect.General.png" />
+    <Content Include="IntuiLab.Kinect.Gesture.png" />
+    <Content Include="IntuiLab.Kinect.Pointing.png" />
+    <Content Include="IntuiLab.Kinect.PosturesLetters.png" />
+    <Content Include="IntuiLab.Kinect.PosturesOrders.png" />
+    <Content Include="IntuiLab.Kinect.Settings.png" />
+    <Content Include="kinect_ico_32.png" />
+    <Content Include="ReadMe.txt" />
+    <Content Include="Resources\kinect_lock.png" />
+    <None Include="IntuiLab.Kinect.General.dax" />
+    <None Include="IntuiLab.Kinect.Gesture.dax" />
+    <None Include="IntuiLab.Kinect.ifd" />
+    <None Include="IntuiLab.Kinect.Pointing.dax" />
+    <None Include="IntuiLab.Kinect.PosturesLetters.dax" />
+    <None Include="IntuiLab.Kinect.PosturesOrders.dax" />
+    <None Include="IntuiLab.Kinect.Settings.dax" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /S /Y /i "$(ProjectDir)packages\Bespoke.Common.dll" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)packages\Bespoke.Common.Osc.dll" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)packages\KinectInteraction170_32.dll" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)packages\KinectInteraction170_64.dll" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)packages\Microsoft.Kinect.Toolkit.dll" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)packages\Microsoft.Kinect.Toolkit.Interaction.dll" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)bin\$(ConfigurationName)\$(TargetFileName)" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)*.ifd" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)*.png" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)*.jpg" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)*.wmv" "$(SolutionDir)OutputAssemblies\"
+xcopy /S /Y /i "$(ProjectDir)*.dax" "$(SolutionDir)OutputAssemblies\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mashup ApiNumber="12" Name="IntuiLab.Kinect.Pointing" Description="" Category="Kinect" Author="IntuiLab" AuthorId="IntuiLab" Icon="IntuiLab.Kinect.Pointing.png" OriginalLocalPath=".\Local" OriginalDataPath=".\Data" OriginalProcessID="11480">
+  <MashupSpace ContextAlias="CURRENT_SPACE" Name="mashup_root_0" OriginalAbsoluteVisualPath="player://visuals/Project 343/Space 1">
+    <Space Name="Space 1" AutoReset="false" BackgroundColor="#FF000000" />
+  </MashupSpace>
+  <MashupCollection Name="mashup_root_1" OriginalAbsoluteVisualPath="player://visuals/Project 343/Space 1/Top/Default_template_for_Kinect_Pointing" CreateAsCollectionSibling="true">
+    <Collection Name="Default_template_for_Kinect_Pointing" Visual="Group" Style="" Container="Static" ContainerStyle="">
+      <Properties>
+        <Property Type="Container" Name="MinWidth"><![CDATA[value:100]]></Property>
+        <Property Type="Container" Name="MinHeight"><![CDATA[value:100]]></Property>
+        <Property Type="Container" Name="MaxWidth"><![CDATA[value:4000]]></Property>
+        <Property Type="Container" Name="MaxHeight"><![CDATA[value:4000]]></Property>
+        <Property Type="Container" Name="X"><![CDATA[value:960]]></Property>
+        <Property Type="Container" Name="Y"><![CDATA[value:540]]></Property>
+        <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+        <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+        <Property Type="Container" Name="Width"><![CDATA[value:1920]]></Property>
+        <Property Type="Visual" Name="InitialWidth"><![CDATA[value:1920]]></Property>
+        <Property Type="Container" Name="Height"><![CDATA[value:1080]]></Property>
+        <Property Type="Visual" Name="InitialHeight"><![CDATA[value:1080]]></Property>
+        <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+        <Property Type="Container" Name="IsVisible"><![CDATA[value:True]]></Property>
+        <Property Type="Container" Name="IsHitTestVisible"><![CDATA[value:False]]></Property>
+      </Properties>
+      <Asset Name="Right_Hand_User_1" Visual="DefaultImage" Style="" Container="Default" ContainerStyle="" Domain="value:Image">
+        <Properties>
+          <Property Type="Domain" Name="Source"><![CDATA[player://resources/bcbaa42e-7d56-58f3-ko29-07752feafd48]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:953]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:418]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:116]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:138]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="IsVisible"><![CDATA[value:True]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="Left_Hand_User_1" Visual="DefaultImage" Style="" Container="Default" ContainerStyle="" Domain="value:Image">
+        <Properties>
+          <Property Type="Domain" Name="Source"><![CDATA[player://resources/bcbaa42e-7d56-58f3-az95-07752feafd47]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:791]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:418]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:116]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:138]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="IsVisible"><![CDATA[value:True]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="Right_Hand_User_2" Visual="DefaultImage" Style="" Container="Default" ContainerStyle="" Domain="value:Image">
+        <Properties>
+          <Property Type="Domain" Name="Source"><![CDATA[player://resources/bcbaa42e-7d56-58f3-ko29-07752foafd48]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:953]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:418]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:116]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:138]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="IsVisible"><![CDATA[value:False]]></Property>
+        </Properties>
+      </Asset>
+      <Asset Name="Left_Hand_User_2" Visual="DefaultImage" Style="" Container="Default" ContainerStyle="" Domain="value:Image">
+        <Properties>
+          <Property Type="Domain" Name="Source"><![CDATA[player://resources/bcbaa42e-7d56-58f3-az95-07752fuafd47]]></Property>
+          <Property Type="Container" Name="X"><![CDATA[value:791]]></Property>
+          <Property Type="Container" Name="Y"><![CDATA[value:418]]></Property>
+          <Property Type="Container" Name="Width"><![CDATA[value:116]]></Property>
+          <Property Type="Container" Name="Height"><![CDATA[value:138]]></Property>
+          <Property Type="Container" Name="Orientation"><![CDATA[value:0]]></Property>
+          <Property Type="Container" Name="MinimizedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="MinimizedPressedImage"><![CDATA[player://data/DefaultAssets/DefaultMinimized.png]]></Property>
+          <Property Type="Container" Name="IsVisible"><![CDATA[value:False]]></Property>
+        </Properties>
+      </Asset>
+    </Collection>
+  </MashupCollection>
+  <MashupExternalAsset ContextAlias="ASSOCIATED_IA">
+    <ExternalAsset Name="Hand Pointing" DescriptorPath="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.ifd" ExternalAssetName="PointingFacade">
+      <Attachments>
+        <EventTrigger EventType="Domain" EventName="NewHandActive">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:1" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:False" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/" Type="Container" Name="Show" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bShowWithAnimation" Value="value:False" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/" Type="Container" Name="MoveTo" Delay="value:0.0">
+            <ServiceArgumentParameter ParamName="dX" ArgumentName="X" />
+            <ServiceArgumentParameter ParamName="dY" ArgumentName="Y" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandMove">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:1" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/" Type="Container" Name="MoveTo" Delay="value:0.0">
+            <ServiceArgumentParameter ParamName="dX" ArgumentName="X" />
+            <ServiceArgumentParameter ParamName="dY" ArgumentName="Y" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandLost">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:1" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/" Type="Container" Name="Hide" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bHideWithAnimation" Value="value:False" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandGrip">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:1" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/" Type="Domain" Name="ChangeContent" Delay="value:0.0">
+            <ServiceValueParameter ParamName="refContent" Value="player://data/Images/RightHandClosedUser1.png" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandGripReleased">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:1" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_1/" Type="Domain" Name="ChangeContent" Delay="value:0.0">
+            <ServiceValueParameter ParamName="refContent" Value="player://data/Images/RightHandOpenedUser1.png" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="NewHandActive">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:0" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:False" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/" Type="Container" Name="Show" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bShowWithAnimation" Value="value:False" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/" Type="Container" Name="MoveTo" Delay="value:0.0">
+            <ServiceArgumentParameter ParamName="dX" ArgumentName="X" />
+            <ServiceArgumentParameter ParamName="dY" ArgumentName="Y" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandMove">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:0" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/" Type="Container" Name="MoveTo" Delay="value:0.0">
+            <ServiceArgumentParameter ParamName="dX" ArgumentName="X" />
+            <ServiceArgumentParameter ParamName="dY" ArgumentName="Y" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandLost">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:0" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/" Type="Container" Name="Hide" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bHideWithAnimation" Value="value:False" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandGrip">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:0" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/" Type="Domain" Name="ChangeContent" Delay="value:0.0">
+            <ServiceValueParameter ParamName="refContent" Value="player://data/Images/LeftHandClosedUser1.png" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandGripReleased">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:0" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_1/" Type="Domain" Name="ChangeContent" Delay="value:0.0">
+            <ServiceValueParameter ParamName="refContent" Value="player://data/Images/LeftHandOpenedUser1.png" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="NewHandActive">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:3" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:False" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/" Type="Container" Name="Show" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bShowWithAnimation" Value="value:False" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/" Type="Container" Name="MoveTo" Delay="value:0.0">
+            <ServiceArgumentParameter ParamName="dX" ArgumentName="X" />
+            <ServiceArgumentParameter ParamName="dY" ArgumentName="Y" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandMove">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:3" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/" Type="Container" Name="MoveTo" Delay="value:0.0">
+            <ServiceArgumentParameter ParamName="dX" ArgumentName="X" />
+            <ServiceArgumentParameter ParamName="dY" ArgumentName="Y" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandLost">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:3" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/" Type="Container" Name="Hide" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bHideWithAnimation" Value="value:False" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandGrip">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:3" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/" Type="Domain" Name="ChangeContent" Delay="value:0.0">
+            <ServiceValueParameter ParamName="refContent" Value="player://data/Images/RightHandClosedUser2.png" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandGripReleased">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:3" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Right_Hand_User_2/" Type="Domain" Name="ChangeContent" Delay="value:0.0">
+            <ServiceValueParameter ParamName="refContent" Value="player://data/Images/RightHandOpenedUser2.png" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="NewHandActive">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:2" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:False" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/" Type="Container" Name="Show" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bShowWithAnimation" Value="value:False" />
+          </InvokeService>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/" Type="Container" Name="MoveTo" Delay="value:0.0">
+            <ServiceArgumentParameter ParamName="dX" ArgumentName="X" />
+            <ServiceArgumentParameter ParamName="dY" ArgumentName="Y" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandMove">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:2" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/" Type="Container" Name="MoveTo" Delay="value:0.0">
+            <ServiceArgumentParameter ParamName="dX" ArgumentName="X" />
+            <ServiceArgumentParameter ParamName="dY" ArgumentName="Y" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandLost">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:2" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/" Type="Container" Name="Hide" Delay="value:0.0">
+            <ServiceValueParameter ParamName="bHideWithAnimation" Value="value:False" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandGrip">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:2" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/" Type="Domain" Name="ChangeContent" Delay="value:0.0">
+            <ServiceValueParameter ParamName="refContent" Value="player://data/Images/LeftHandClosedUser2.png" />
+          </InvokeService>
+        </EventTrigger>
+        <EventTrigger EventType="Domain" EventName="UserHandGripReleased">
+          <Conditions Operator="And">
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ArgumentParameter ArgumentName="HandID" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:2" />
+              </RightOperand>
+            </ComparisonCondition>
+            <ComparisonCondition Operator="Equal">
+              <LeftOperand>
+                <ValueParameter Value="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/ContainerInterface/IsVisible" />
+              </LeftOperand>
+              <RightOperand>
+                <ValueParameter Value="value:True" />
+              </RightOperand>
+            </ComparisonCondition>
+          </Conditions>
+          <InvokeService Target="mashup://visuals/mashup_root_1/Default_template_for_Kinect_Pointing/Left_Hand_User_2/" Type="Domain" Name="ChangeContent" Delay="value:0.0">
+            <ServiceValueParameter ParamName="refContent" Value="player://data/Images/LeftHandOpenedUser2.png" />
+          </InvokeService>
+        </EventTrigger>
+      </Attachments>
+      <Dependencies>
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.ifd" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.dll" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Bespoke.Common.Osc.dll" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Microsoft.Kinect.Toolkit.Interaction.dll" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/kinect_ico_32.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.General.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.Gesture.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.Pointing.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.PosturesLetters.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.PosturesOrders.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/IntuiLab.Kinect.Settings.ifa" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Birds.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Butterfly.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureA_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureA_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureA_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureHome_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureHome_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureHome_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureStay_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureStay_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureStay_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureT_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureT_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureT_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureU_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureU_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureU_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureV_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureV_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureV_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureWait_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureWait_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePostureWait_progress.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePush_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsignePush_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneSwipeLeft_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneSwipeLeft_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneSwipeRight_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneSwipeRight_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneWave_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ConsigneWave_idle.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Dandelion.jpg" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Gates.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Island.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/kinect_lock.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/LeftHandClosedUser1.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/LeftHandClosedUser2.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/LeftHandOpenedUser1.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/LeftHandOpenedUser2.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ProgressBar_detected.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/ProgressBar_none.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/RightHandClosedUser1.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/RightHandClosedUser2.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/RightHandOpenedUser1.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/RightHandOpenedUser2.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/User_Not_Present.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/User_Present.png" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Video.wmv" Length="-1" />
+        <Dependency URI="player://data/InterfaceAssets/Kinect/Resources/Wheel.png" Length="-1" />
+      </Dependencies>
+    </ExternalAsset>
+  </MashupExternalAsset>
+  <MashupResource>
+    <Resource Key="bcbaa42e-7d56-58f3-ko29-07752feafd48" Type="uri" Length="99808" LastModificationDate="2015-03-16T10:46:04Z" DefaultValue="player://data/Images/RightHandOpenedUser1.png" />
+  </MashupResource>
+  <MashupResource>
+    <Resource Key="bcbaa42e-7d56-58f3-az95-07752feafd47" Type="uri" Length="99000" LastModificationDate="2015-03-16T10:46:04Z" DefaultValue="player://data/Images/LeftHandOpenedUser1.png" />
+  </MashupResource>
+  <MashupResource>
+    <Resource Key="bcbaa42e-7d56-58f3-ko29-07752foafd48" Type="uri" Length="101585" LastModificationDate="2015-03-16T10:46:04Z" DefaultValue="player://data/Images/RightHandOpenedUser2.png" />
+  </MashupResource>
+  <MashupResource>
+    <Resource Key="bcbaa42e-7d56-58f3-az95-07752fuafd47" Type="uri" Length="100930" LastModificationDate="2015-03-16T10:46:04Z" DefaultValue="player://data/Images/LeftHandOpenedUser2.png" />
+  </MashupResource>
+</Mashup>
