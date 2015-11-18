@@ -36,7 +36,7 @@ To be able to add Kinect Interface Assets in IntuiFace Composer, follow these st
 * Launch **IntuiFace Composer**
 * Add an Interface Asset and when you enter "Kinect" in the search bar, you can see all **Kinect Interface Assets**
 
-![alt Kinect Interface Assets in IntuiFace Composer](http://deposit.intuilab.com/deposit/github/SnapKinectIA.png)
+![alt Kinect Interface Assets in IntuiFace Composer](Screenshots/SnapKinectIA.png)
 
 To use the various Kinect interfaces you must first install **Kinect for Windows Runtime v1.8 or later** available on the [Microsoft support website](http://www.microsoft.com/en-us/download/details.aspx?id=40277). 
 If Composer is running during installation of the Kinect runtime, you must stop and restart it for changes to take effect.
