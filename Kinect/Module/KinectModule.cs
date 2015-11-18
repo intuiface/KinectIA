@@ -1,35 +1,15 @@
-            // ****************************************************************************
-            // <copyright file="KinectModule.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
+using IntuiLab.Kinect.DataUserTracking;
+using IntuiLab.Kinect.DummyKinectInteraction;
+using IntuiLab.Kinect.Enums;
+using IntuiLab.Kinect.Events;
+using IntuiLab.Kinect.Exceptions;
+using IntuiLab.Kinect.Utils;
+using Microsoft.Kinect;
+using Microsoft.Kinect.Toolkit.Interaction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading;
-using System.IO;
-
-using Microsoft.Kinect;
-
-using IntuiLab.Kinect.Events;
-using IntuiLab.Kinect.Enums;
-using IntuiLab.Kinect.DataUserTracking;
-using IntuiLab.Kinect.Utils;
-using IntuiLab.Kinect.Exceptions;
-using Microsoft.Kinect.Toolkit.Interaction;
-using IntuiLab.Kinect.DummyKinectInteraction;
 
 namespace IntuiLab.Kinect
 {
@@ -525,7 +505,6 @@ namespace IntuiLab.Kinect
                 catch (Exception e)
                 {
                     DisplayDebugLog("Kinect main Thread => " + e.Message, true);
-                    //throw new KinectException(e.Message);
                 }
             }
 

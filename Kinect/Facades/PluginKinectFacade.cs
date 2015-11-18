@@ -1,26 +1,5 @@
-            // ****************************************************************************
-            // <copyright file="PluginKinectFacade.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel;
-using IntuiLab.Kinect.Exceptions;
 
 namespace IntuiLab.Kinect
 {
@@ -51,7 +30,6 @@ namespace IntuiLab.Kinect
         /// <summary>
         /// Event triggered when there is nobody in front of the sensor
         /// </summary>
-        //public event NoUserDetectedEventHandler NoUserDetected;
         public event EventHandler NoUserDetected;
 
         /// <summary>
@@ -167,7 +145,6 @@ namespace IntuiLab.Kinect
         {
             PropertiesPluginKinect.Instance.EnableSkeletonFrameService = true;
             PropertiesPluginKinect.Instance.EnableColorFrameService = true;
-            //PropertiesPluginKinect.Instance.EnableSkeletonOnDepthFrameService = true;
             PropertiesPluginKinect.Instance.EnableColorFrameService = true;
             PropertiesPluginKinect.Instance.EnableDepthFrameService = true;
         }
@@ -179,33 +156,12 @@ namespace IntuiLab.Kinect
         {
             PropertiesPluginKinect.Instance.EnableSkeletonFrameService = false;
             PropertiesPluginKinect.Instance.EnableColorFrameService = false;
-            //PropertiesPluginKinect.Instance.EnableSkeletonOnDepthFrameService = false;
             PropertiesPluginKinect.Instance.EnableColorFrameService = false;
             PropertiesPluginKinect.Instance.EnableDepthFrameService = false;
         }
 
 
         #endregion
-
-        
-
-        ///// <summary>
-        ///// Set the kinect tracking mode (Default/Seated)
-        /////     - Default mode : all skeleton of an user is tracked
-        /////     - Seated mode : only the head and arms are tracked
-        ///// </summary>
-        ///// <param name="sTrackingMode"></param>
-        //public void ModifyTrackingMode(string sTrackingMode)
-        //{
-        //    if (sTrackingMode == "Default")
-        //    {
-        //        m_refKinectModule.TrackingMode = Microsoft.Kinect.SkeletonTrackingMode.Default;
-        //    }
-        //    else if (sTrackingMode == "Seated") 
-        //    {
-        //        m_refKinectModule.TrackingMode = Microsoft.Kinect.SkeletonTrackingMode.Seated;
-        //    }
-        //}
 
         #endregion
 
@@ -214,13 +170,11 @@ namespace IntuiLab.Kinect
         public void StartRecord(string sFile)
         {
             PluginKinect.InstancePluginKinect.StartRecord(sFile);
-            //m_refKinectModule.StartDataRecording(sFile);
         }
 
         public void StopRecord()
         {
             PluginKinect.InstancePluginKinect.StopRecord();
-            //m_refKinectModule.StopDataRecording();
         }
         #endregion
 

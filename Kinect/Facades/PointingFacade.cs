@@ -1,27 +1,8 @@
-            // ****************************************************************************
-            // <copyright file="PointingFacade.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
+using IntuiLab.Kinect.DataUserTracking.Events;
+using IntuiLab.Kinect.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using IntuiLab.Kinect.Exceptions;
-using IntuiLab.Kinect.DataUserTracking.Events;
-using IntuiLab.Kinect.Events;
 
 namespace IntuiLab.Kinect
 {
@@ -42,10 +23,9 @@ namespace IntuiLab.Kinect
         /// </summary>
         private Dictionary<int, DateTime> m_refLastEvents = new Dictionary<int, DateTime>();
 
-         #endregion
+        #endregion
 
         #region Properties
-
 
         #region PointingModeEnabled
 
@@ -134,16 +114,14 @@ namespace IntuiLab.Kinect
 
         private void OnNewHandActive(object sender, HandActiveEventArgs e)
         {
-        //  Precondition checking
-        //
+            // Precondition checking
             if (m_refIdHandFeedback.ContainsKey(e.userID) == false)
             {
-                // Unknown user (cleanup ???)
+                // Unknown user
                 return;
             }
 
-        //  Raise associated event
-        //
+            // Raise associated event
             if (e.HandType == Microsoft.Kinect.Toolkit.Interaction.InteractionHandType.Left)
             {
                 var handId = m_refIdHandFeedback[e.userID].ElementAt(0);
@@ -172,7 +150,6 @@ namespace IntuiLab.Kinect
 
         public event UserHandMoveEventHandler UserHandMove;
 
-        
         protected void RaiseUserHandMove(int handID, int posX, int posY, bool isGrip)
         {
             if (UserHandMove != null)
@@ -187,16 +164,14 @@ namespace IntuiLab.Kinect
 
         private void OnUserHandMove(object sender, HandMoveEventArgs e)
         {
-        //  Precondition checking
-        //
+            // Precondition checking
             if (m_refIdHandFeedback.ContainsKey(e.userID) == false)
             {
-                // Unknown user (cleanup ???)
+                // Unknown user
                 return;
             }
 
-        //  Raise associated event
-        //
+            // Raise associated event
             if (e.HandType == Microsoft.Kinect.Toolkit.Interaction.InteractionHandType.Left)
             {
                 var handId = m_refIdHandFeedback[e.userID].ElementAt(0);
@@ -230,8 +205,7 @@ namespace IntuiLab.Kinect
 
         private void OnUserHandGripStateChnged(object sender, HandGripStateChangeEventArgs e)
         {
-        //  Precondition checking
-        //
+            // Precondition checking
             if (m_refIdHandFeedback.ContainsKey(e.userID) == false)
             {
                 return;

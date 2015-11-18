@@ -1,32 +1,10 @@
-            // ****************************************************************************
-            // <copyright file="KinectFrameManager.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
+using IntuiLab.Kinect.DataUserTracking;
+using IntuiLab.Kinect.Utils;
+using Microsoft.Kinect;
+using Microsoft.Kinect.Toolkit.Interaction;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Windows.Media;
-
-using Microsoft.Kinect;
-
-using IntuiLab.Kinect.Events;
-using IntuiLab.Kinect.Utils;
-using IntuiLab.Kinect.DataUserTracking;
-using Microsoft.Kinect.Toolkit.Interaction;
 
 namespace IntuiLab.Kinect
 {
@@ -62,60 +40,56 @@ namespace IntuiLab.Kinect
                 return;
             }
 
-            //lock (this)
-            //{
-                // SkeletonTracking Frame Manager
-                using (SkeletonFrame SFrame = e.OpenSkeletonFrame())
+            // SkeletonTracking Frame Manager
+            using (SkeletonFrame SFrame = e.OpenSkeletonFrame())
+            {
+                try
+                {
+                    ManageSkeletonFrame(SFrame);
+                }
+                catch (Exception ex)
+                {
+                    // Just log the error   
+                    Console.Error.WriteLine("Error with skeleton frame : " + ex.Message + " _ " + ex.StackTrace);
+                }
+            }
+
+            // Color Frame Manager
+            if (PropertiesPluginKinect.Instance.EnableColorFrameService)
+            {
+                using (ColorImageFrame CFrame = e.OpenColorImageFrame())
                 {
                     try
                     {
-                        ManageSkeletonFrame(SFrame);
+                        ManageColorFrame(CFrame);
                     }
                     catch (Exception ex)
                     {
                         // Just log the error   
-                        Console.Error.WriteLine("Error with skeleton frame : " + ex.Message + " _ " + ex.StackTrace);
-                    }
-                    
-                }
-
-                // Color Frame Manager
-                if (PropertiesPluginKinect.Instance.EnableColorFrameService)
-                {
-                    using (ColorImageFrame CFrame = e.OpenColorImageFrame())
-                    {
-                        try
-                        {
-                            ManageColorFrame(CFrame);
-                        }
-                        catch (Exception ex)
-                        {
-                            // Just log the error   
-                            Console.Error.WriteLine("Error with color frame : " + ex.Message + " _ " + ex.StackTrace);
-                        }
+                        Console.Error.WriteLine("Error with color frame : " + ex.Message + " _ " + ex.StackTrace);
                     }
                 }
+            }
 
-                // Depth Frame Manager
-                if (PropertiesPluginKinect.Instance.EnableDepthFrameService || 
-                    PropertiesPluginKinect.Instance.KinectPointingModeEnabled ||
-                    PropertiesPluginKinect.Instance.EnableGestureGrip)
+            // Depth Frame Manager
+            if (PropertiesPluginKinect.Instance.EnableDepthFrameService || 
+                PropertiesPluginKinect.Instance.KinectPointingModeEnabled ||
+                PropertiesPluginKinect.Instance.EnableGestureGrip)
+            {
+                using (DepthImageFrame DFrame = e.OpenDepthImageFrame())
                 {
-                    using (DepthImageFrame DFrame = e.OpenDepthImageFrame())
+                    try
                     {
-                        try
-                        {
-                            ManageDepthFrame(DFrame);
-                        }
-                        catch (Exception ex)
-                        {
-                            // Just log the error   
-                            Console.Error.WriteLine("Error with depth frame : " + ex.Message + " _ " + ex.StackTrace);
-                        }
+                        ManageDepthFrame(DFrame);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Just log the error   
+                        Console.Error.WriteLine("Error with depth frame : " + ex.Message + " _ " + ex.StackTrace);
+                    }
                         
-                    }
                 }
-            //}
+            }
         }
         #endregion
 
@@ -145,7 +119,6 @@ namespace IntuiLab.Kinect
                 if (pixelDataRGB != null)
                 {
                     // If the skeleton feedback on color frame is activated, draw skeleton on color frame.
-                    //if (!PropertiesPluginKinect.Instance.EnableSkeletonOnColorFrameService)
                     if (!PropertiesPluginKinect.Instance.EnableSkeletonOnColorDepth)
                     {
                         PropertiesPluginKinect.Instance.ColorFrame = Feedback.FeedbackColorFrame(pixelDataRGB, PropertiesPluginKinect.Instance.KinectResolutionWidth, PropertiesPluginKinect.Instance.KinectResolutionHeight);
@@ -196,7 +169,6 @@ namespace IntuiLab.Kinect
                 if (pixelDataDepth != null && PropertiesPluginKinect.Instance.EnableDepthFrameService)
                 {
                     // If the skeleton feedback on depth frame is activated, draw skeleton on depth frame.
-                    //if (!PropertiesPluginKinect.Instance.EnableSkeletonOnDepthFrameService)
                     if (!PropertiesPluginKinect.Instance.EnableSkeletonOnColorDepth)
                     {
                         PropertiesPluginKinect.Instance.DepthFrame = Feedback.FeedbackDepthFrame(pixelDataDepth, PropertiesPluginKinect.Instance.KinectResolutionWidth, PropertiesPluginKinect.Instance.KinectResolutionHeight);
@@ -295,7 +267,6 @@ namespace IntuiLab.Kinect
                 if (user.Key == nUserIDNearest)
                 {
                     user.Value.IsNearest = true;
-                    //UserDistance = user.Value.UserDepth.ToString();
                     PropertiesPluginKinect.Instance.KinectUserDistance = user.Value.UserDepth.ToString();
                 }
                 else

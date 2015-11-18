@@ -1,31 +1,12 @@
-            // ****************************************************************************
-            // <copyright file="Feedback.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
+using IntuiLab.Kinect.DataUserTracking;
+using Microsoft.Kinect;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Kinect;
-using System.Windows.Media;
-using IntuiLab.Kinect.DataUserTracking;
-using System.Windows;
-using System.Windows.Media.Imaging;
-using System.IO;
 using System.Globalization;
+using System.IO;
+using System.Windows;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace IntuiLab.Kinect.Utils
 {
@@ -104,11 +85,10 @@ namespace IntuiLab.Kinect.Utils
 
                     if (refUsers.Count > 0)
                     {
-                        // Draww skeletons
+                        // Draw skeletons
                         foreach (UserData user in refUsers)
                         {
                             DrawBonesAndJoints(user.UserSkeleton.refSkeleton, dc);
-                            //DrawHand(user, dc);
                         }
                     }
 
@@ -199,7 +179,6 @@ namespace IntuiLab.Kinect.Utils
                         foreach (UserData user in refUsers)
                         {
                             DrawBonesAndJoints(user.UserSkeleton.refSkeleton, dc);
-                            //DrawHand(user, dc);
                         }
                     }
                     DrawKinectModeOnStream(dc);
@@ -246,7 +225,6 @@ namespace IntuiLab.Kinect.Utils
                         foreach (UserData user in refUsers)
                         {
                             DrawBonesAndJoints(user.UserSkeleton.refSkeleton, dc);
-                            //DrawHand(user, dc);
                         }
                     }
                     DrawKinectModeOnStream(dc);

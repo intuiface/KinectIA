@@ -1,28 +1,9 @@
-            // ****************************************************************************
-            // <copyright file="TuioKinect.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
+using Bespoke.Common.Osc;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Net;
-using System.Text;
-
-using Bespoke.Common.Osc;
 
 namespace IntuiLab.Kinect.TUIO.CursorKinect
 {
@@ -39,13 +20,13 @@ namespace IntuiLab.Kinect.TUIO.CursorKinect
     /// </summary>
     public class TuioKinect
     {
-        #region constants
+        #region Constants
         
         private const string _cursorAddressPattern = "/tuio/2Dcur";
 
         #endregion
 
-        #region fields
+        #region Fields
 
         private IPEndPoint _ipEndPoint;
 
@@ -55,7 +36,7 @@ namespace IntuiLab.Kinect.TUIO.CursorKinect
 
         #endregion
 
-        #region constructors
+        #region Constructors
 
         /// <summary>
         /// Creates a new server with and endpoint at localhost, port 3333.
@@ -76,7 +57,7 @@ namespace IntuiLab.Kinect.TUIO.CursorKinect
 
         #endregion
 
-        #region frame related methods
+        #region Frame related methods
 
         /// <summary>
         /// Initialized a new frame and increases the frame counter.
@@ -96,7 +77,7 @@ namespace IntuiLab.Kinect.TUIO.CursorKinect
 
         #endregion
 
-        #region cursor related methods
+        #region Cursor related methods
         
         /// <summary>
         /// Adds a TUIO cursor. A new id, not used before, must be provided.
@@ -134,7 +115,7 @@ namespace IntuiLab.Kinect.TUIO.CursorKinect
 
         #endregion
 
-        #region osc message assembly
+        #region OSC message assembly
 
         private OscBundle GetFrameBundle()
         {

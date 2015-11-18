@@ -3,7 +3,7 @@
     "discoveryVersion": "v1",
     "id": "pluginKinect:v2",
     "name": "Kinect",
-    "version": "v2.3.2",
+    "version": "v2.4.0",
     "title": "Plugin Kinect DLL",
     "protocol": "dll",
 	"dependencies":["IntuiLab.Kinect.dll","Bespoke.Common.Osc.dll","Microsoft.Kinect.Toolkit.Interaction.dll"],

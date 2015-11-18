@@ -1,25 +1,3 @@
-            // ****************************************************************************
-            // <copyright file="PluginKinectEnum.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 namespace IntuiLab.Kinect.Enums
 {
     #region KinectModuleState
@@ -130,18 +108,4 @@ namespace IntuiLab.Kinect.Enums
         KINECT_DIRECTION_NONE
     };
     #endregion
-
-    //#region KinectMode
-    ///// <summary>
-    ///// Indicate differents kinect mode
-    ///// KINECT_MODE_GESTURE => Kinect enable gesture and posture
-    ///// KINECT_MODE_POINTING => Kinect enable pointing for direct manipulation
-    ///// </summary>
-    //public enum KinectMode
-    //{
-    //    KINECT_MODE_GESTURE,
-    //    KINECT_MODE_POINTING
-    //}
-
-    //#endregion
 }

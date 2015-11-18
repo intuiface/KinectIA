@@ -1,32 +1,13 @@
-            // ****************************************************************************
-            // <copyright file="GestureRecognizerManager.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using IntuiLab.Kinect.DataUserTracking;
+using IntuiLab.Kinect.DataUserTracking.Events;
+using IntuiLab.Kinect.Enums;
+using IntuiLab.Kinect.Events;
 using IntuiLab.Kinect.GestureRecognizer.Gestures;
 using IntuiLab.Kinect.GestureRecognizer.Postures;
-using System.Timers;
-using IntuiLab.Kinect.Enums;
 using Microsoft.Kinect;
-using IntuiLab.Kinect.Events;
-using IntuiLab.Kinect.DataUserTracking.Events;
+using System;
+using System.Collections.Generic;
+using System.Timers;
 
 namespace IntuiLab.Kinect.GestureRecognizer
 {
@@ -266,7 +247,6 @@ namespace IntuiLab.Kinect.GestureRecognizer
             m_refTimerPostureManager.Interval = PropertiesPluginKinect.Instance.PostureRecognizedTime;
             m_refTimerPostureManager.Elapsed += OnTimeOutPosture;
 
-            //m_refPostureRecognized = EnumPosture.POSTURE_NONE;
             m_refPostureRecognized = PropertiesPluginKinect.Instance.SavePosturerecognize;
 
             if (PropertiesPluginKinect.Instance.SavePosturerecognize != EnumPosture.POSTURE_NONE)
@@ -617,7 +597,6 @@ namespace IntuiLab.Kinect.GestureRecognizer
         private void OnPosture(object sender, GesturesEventArgs e)
         {
             // Posture detect in first time
-            //if (m_refPostureRecognized != e.Posture)
             if(PropertiesPluginKinect.Instance.SavePosturerecognize != e.Posture)
             {
                 RaiseUserGestureDetected(ConvertPostureEnum(e.Posture));
@@ -644,7 +623,6 @@ namespace IntuiLab.Kinect.GestureRecognizer
                 }
             }
             // If event emit by a posture
-            //else if (e.Posture != EnumPosture.POSTURE_NONE)
             else if (PropertiesPluginKinect.Instance.SavePosturerecognize != EnumPosture.POSTURE_NONE)
             {
                 if (PropertiesPluginKinect.Instance.SavePosturerecognize != e.Posture)
@@ -966,7 +944,6 @@ namespace IntuiLab.Kinect.GestureRecognizer
         /// </summary>
         public void Dispose()
         {
-
             if (m_refTimerGestureManager != null)
             {
                 m_refTimerGestureManager.Elapsed -= OnTimeOutGesture;

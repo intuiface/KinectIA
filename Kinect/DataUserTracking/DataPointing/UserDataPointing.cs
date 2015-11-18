@@ -1,29 +1,8 @@
-            // ****************************************************************************
-            // <copyright file="UserDataPointing.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
+using IntuiLab.Kinect.DataUserTracking.Events;
+using Microsoft.Kinect;
+using Microsoft.Kinect.Toolkit.Interaction;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Kinect;
-using IntuiLab.Kinect.Enums;
-using IntuiLab.Kinect.DataUserTracking.Events;
-using System.Windows.Media.Media3D;
-using Microsoft.Kinect.Toolkit.Interaction;
 using System.Drawing;
 
 namespace IntuiLab.Kinect.DataUserTracking
@@ -35,6 +14,7 @@ namespace IntuiLab.Kinect.DataUserTracking
     internal class UserDataPointing : UserData, IDisposable
     {
         #region Fields
+
         /// <summary>
         /// User hands data
         /// This dictionnary record the hand left and hand right data for an user
@@ -46,6 +26,7 @@ namespace IntuiLab.Kinect.DataUserTracking
         #region Events
 
         #region UserHandActive
+
         /// <summary>
         /// Event triggered when a hand became active
         /// </summary>
@@ -134,7 +115,6 @@ namespace IntuiLab.Kinect.DataUserTracking
 
             m_UserHandsData[InteractionHandType.Left].HandGripStateChanged += OnUserHandGripStateChanged;
             m_UserHandsData[InteractionHandType.Right].HandGripStateChanged += OnUserHandGripStateChanged;
-            
         }
 
         #endregion

@@ -1,27 +1,6 @@
-            // ****************************************************************************
-            // <copyright file="PropertiesPluginKinect.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using Microsoft.Kinect;
 using IntuiLab.Kinect.Events;
+using System;
+using System.ComponentModel;
 
 namespace IntuiLab.Kinect
 {
@@ -67,6 +46,7 @@ namespace IntuiLab.Kinect
         #endregion
 
         #region NotifyPropertyChanged
+
         // Event triggered by modification of a property
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -81,6 +61,7 @@ namespace IntuiLab.Kinect
         #endregion 
 
         #region Initialize
+
         public void InitializeProperties()
         {
             // Kinect Properties Initialisation
@@ -210,15 +191,15 @@ namespace IntuiLab.Kinect
         #endregion
 
         #region Constants
+
         private const double KINECT_MIN_DISTANCE_TO_LOCK = 0.5;
 
-        //public const int MAX_SKELETON_IN_STORAGE_MODE_GESTURE = 5;
-        //public const int MAX_SKELETON_IN_STORAGE_MODE_POINTING = 5;
         #endregion
 
         #region Event Synchronize
 
         #region SynchronizeElevationAngle
+
         public event EventHandler<SynchronizeElevationAngleEventArgs> SynchronizeElevationAngle;
 
         private void RaiseSynchronizeElevationAngle(object sender, SynchronizeElevationAngleEventArgs e)
@@ -231,6 +212,7 @@ namespace IntuiLab.Kinect
         #endregion
 
         #region SynchronizeColorStreamActivation
+
         public event EventHandler<SynchronizeColorStreamActivationEventArgs> SynchronizeColorStreamActivation;
 
         private void RaiseSynchronizeColorStreamActivation(object sender, SynchronizeColorStreamActivationEventArgs e)
@@ -243,6 +225,7 @@ namespace IntuiLab.Kinect
         #endregion
 
         #region SynchronizeDepthStreamActivation
+
         public event EventHandler<SynchronizeDepthStreamActivationEventArgs> SynchronizeDepthStreamActivation;
 
         private void RaiseSynchronizeDepthStreamActivation(object sender, SynchronizeDepthStreamActivationEventArgs e)
@@ -255,6 +238,7 @@ namespace IntuiLab.Kinect
         #endregion
 
         #region SynchronizeKinectMode
+
         public event EventHandler<SynchronizeKinectModeEventArgs> SynchronizeKinectMode;
 
         private void RaiseSynchronizeKinectMode(object sender, SynchronizeKinectModeEventArgs e)
@@ -408,10 +392,12 @@ namespace IntuiLab.Kinect
         #endregion
 
         #region KinectUserDistance
+
         /// <summary>
         /// Distance between User and the Kinect sensor
         /// </summary>
         private double m_dUserDistance;
+
         public string KinectUserDistance
         {
             get
@@ -428,7 +414,6 @@ namespace IntuiLab.Kinect
                 {
                     return m_dUserDistance.ToString(".##");
                 }
-
             }
             set
             {
@@ -445,15 +430,14 @@ namespace IntuiLab.Kinect
                         // if Value betwween minimum and maximum distance to lock, th system is unlocked
                         if (m_dUserDistance >= PropertiesPluginKinect.Instance.KinectMinDistanceToLock && m_dUserDistance <= PropertiesPluginKinect.Instance.KinectMaxDistanceToLock)
                         {
-                            //Unlocked();
                             if (PluginKinect.InstancePluginKinect != null)
                             {
                                 PluginKinect.InstancePluginKinect.Kinect.Unlocked();
                             }
-                        }// else locked system
+                        }
+                        // else locked system
                         else
                         {
-                            //Locked();
                             if (PluginKinect.InstancePluginKinect != null)
                             {
                                 PluginKinect.InstancePluginKinect.Kinect.Locked();
@@ -466,6 +450,7 @@ namespace IntuiLab.Kinect
         #endregion
 
         #region KinectPointingModeEnabled
+
         private bool m_KinectPointingModeEnabled;
         public bool KinectPointingModeEnabled 
         {

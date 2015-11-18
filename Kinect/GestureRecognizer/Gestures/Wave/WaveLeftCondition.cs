@@ -1,35 +1,14 @@
-            // ****************************************************************************
-            // <copyright file="WaveLeftCondition.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
-using System;
+using IntuiLab.Kinect.DataUserTracking;
+using IntuiLab.Kinect.Enums;
+using Microsoft.Kinect;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-using Microsoft.Kinect;
-
-using IntuiLab.Kinect.Enums;
-using IntuiLab.Kinect.DataUserTracking;
 
 namespace IntuiLab.Kinect.GestureRecognizer.Gestures
 {
     internal class WaveLeftCondition : Condition
     {
-        #region Field
+        #region Fields
         
         /// <summary>
         /// Instance of Checker
@@ -104,8 +83,7 @@ namespace IntuiLab.Kinect.GestureRecognizer.Gestures
                 Reset();
             }
             // Condition : Hand is forward the shouler
-            else if (handToShoulderDirections.Contains(EnumKinectDirectionGesture.KINECT_DIRECTION_FORWARD)
-                /*&& handToShoulderDirections.Contains(EnumKinectDirectionGesture.KINECT_DIRECTION_UPWARD)*/)
+            else if (handToShoulderDirections.Contains(EnumKinectDirectionGesture.KINECT_DIRECTION_FORWARD))
             {
                 // Movement did not start yet, initializing
                 if (m_refDirection == EnumKinectDirectionGesture.KINECT_DIRECTION_NONE)
@@ -121,7 +99,6 @@ namespace IntuiLab.Kinect.GestureRecognizer.Gestures
                             Gesture = EnumGesture.GESTURE_WAVE,
                             Posture = EnumPosture.POSTURE_NONE
                         });
-                        
                     }
                     else
                     {

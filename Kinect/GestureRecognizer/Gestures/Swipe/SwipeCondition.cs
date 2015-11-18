@@ -1,36 +1,14 @@
-            // ****************************************************************************
-            // <copyright file="SwipeCondition.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
-using System;
+using IntuiLab.Kinect.DataUserTracking;
+using IntuiLab.Kinect.Enums;
+using Microsoft.Kinect;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-using Microsoft.Kinect;
-
-using IntuiLab.Kinect.Enums;
-using IntuiLab.Kinect.DataUserTracking;
-
 
 namespace IntuiLab.Kinect.GestureRecognizer.Gestures
 {
     internal class SwipeCondition : Condition
     {
-        #region Field
+        #region Fields
 
         /// <summary>
         /// Instance of Checker
@@ -77,7 +55,6 @@ namespace IntuiLab.Kinect.GestureRecognizer.Gestures
             m_refChecker = new Checker(refUser, PropertiesPluginKinect.Instance.SwipeCheckerTolerance);
             m_handVelocity = new List<double>();
             m_GestureBegin = false;
-            
         }
 
         /// <summary>
@@ -116,7 +93,6 @@ namespace IntuiLab.Kinect.GestureRecognizer.Gestures
             }
             // Condition : Hand is in front of the body and between HipCenter and Head
             else if (handToHipOrientation.Contains(EnumKinectDirectionGesture.KINECT_DIRECTION_FORWARD)
-                // && handToHipOrientation.Contains(Direction.Upward)
                 && handToHeadOrientation.Contains(EnumKinectDirectionGesture.KINECT_DIRECTION_DOWNWARD))
             {
                 // Movement did not start yet, initializing
@@ -245,8 +221,6 @@ namespace IntuiLab.Kinect.GestureRecognizer.Gestures
             {
                 refCondition = this
             });
-
-            
         }
     }
 }

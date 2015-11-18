@@ -1,34 +1,16 @@
-            // ****************************************************************************
-            // <copyright file="PushCondition.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
+using IntuiLab.Kinect.DataUserTracking;
+using IntuiLab.Kinect.Enums;
+using Microsoft.Kinect;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Microsoft.Kinect;
-using IntuiLab.Kinect.Enums;
-using IntuiLab.Kinect.DataUserTracking;
 using System.Windows.Media.Media3D;
 
 namespace IntuiLab.Kinect.GestureRecognizer.Gestures
 {
     internal class PushCondition : Condition
     {
-        #region Field
+        #region Fields
 
         /// <summary>
         /// Instance of Checker

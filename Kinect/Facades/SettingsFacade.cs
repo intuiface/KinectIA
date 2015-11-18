@@ -1,25 +1,4 @@
-            // ****************************************************************************
-            // <copyright file="SettingsFacade.cs" company="IntuiLab">
-            // INTUILAB CONFIDENTIAL
-			//_____________________
-			// [2002] - [2015] IntuiLab SA
-			// All Rights Reserved.
-			// NOTICE: All information contained herein is, and remains
-			// the property of IntuiLab SA. The intellectual and technical
-			// concepts contained herein are proprietary to IntuiLab SA
-			// and may be covered by U.S. and other country Patents, patents
-			// in process, and are protected by trade secret or copyright law.
-			// Dissemination of this information or reproduction of this
-			// material is strictly forbidden unless prior written permission
-			// is obtained from IntuiLab SA.
-            // </copyright>
-            // ****************************************************************************
-
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using IntuiLab.Kinect.Exceptions;
 using System.ComponentModel;
 
 namespace IntuiLab.Kinect
@@ -27,6 +6,7 @@ namespace IntuiLab.Kinect
     public class SettingsFacade : INotifyPropertyChanged, IDisposable
     {
         #region NotifyPropertyChanged
+
         // Event triggered by modification of a property
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -179,17 +159,14 @@ namespace IntuiLab.Kinect
                     if (m_Stream == KinectStream.Color)
                     {
                         UseColorStream = true;
-                        //PropertiesPluginKinect.Instance.EnableColorFrameService = true;
                     }
                     else if (m_Stream == KinectStream.Depth)
                     {
                         UseDepthStream = true;
-                        //PropertiesPluginKinect.Instance.EnableDepthFrameService = true;
                     }
                     else if (m_Stream == KinectStream.None)
                     {
                         UseSkeletonStream = true;
-                        //PropertiesPluginKinect.Instance.EnableSkeletonFrameService = true;
                     }
                     NotifyPropertyChanged("Stream");
                 }
@@ -301,7 +278,6 @@ namespace IntuiLab.Kinect
         /// <param name="nElevation">the new elevation sensor</param>
         public void ModifyElevationSensor(string nElevation)
         {
-            //m_refKinectModule.KinectSensorAngle = Convert.ToInt32(nElevation);
             PropertiesPluginKinect.Instance.KinectElevationAngle = Convert.ToInt32(nElevation);
         }
 
@@ -319,7 +295,6 @@ namespace IntuiLab.Kinect
         /// </summary>
         public void DecrementElevationSensor()
         {
-            //m_refKinectModule.KinectSensorAngle -= 1;
             PropertiesPluginKinect.Instance.KinectElevationAngle -= 1;
         }
 
@@ -329,7 +304,6 @@ namespace IntuiLab.Kinect
         /// <param name="dDistance"></param>
         public void ModifyMinDistanceToLock(string dDistance)
         {
-            //m_refKinectModule.MinDistanceToLock = Convert.ToDouble(dDistance);
             PropertiesPluginKinect.Instance.KinectMinDistanceToLock = Convert.ToDouble(dDistance);
         }
 
@@ -338,7 +312,6 @@ namespace IntuiLab.Kinect
         /// </summary>
         public void IncrementMinDistanceToLock()
         {
-            //m_refKinectModule.MinDistanceToLock += 0.1;
             PropertiesPluginKinect.Instance.KinectMinDistanceToLock += 0.1;
         }
 
@@ -347,7 +320,6 @@ namespace IntuiLab.Kinect
         /// </summary>
         public void DecrementMinDistanceToLock()
         {
-            //m_refKinectModule.MinDistanceToLock -= 0.1;
             PropertiesPluginKinect.Instance.KinectMinDistanceToLock -= 0.1;
         }
         #endregion
@@ -381,8 +353,7 @@ namespace IntuiLab.Kinect
         /// <param name="e"></param>
         void PluginPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-        //  Propagate property change events
-        //
+            // Propagate property change events
             switch (e.PropertyName)
             {
                 case "ColorFrame":
