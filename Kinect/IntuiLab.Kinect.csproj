@@ -214,18 +214,18 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /S /Y /i "$(ProjectDir)packages\Bespoke.Common.dll" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)packages\Bespoke.Common.Osc.dll" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)packages\KinectInteraction170_32.dll" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)packages\KinectInteraction170_64.dll" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)packages\Microsoft.Kinect.Toolkit.dll" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)packages\Microsoft.Kinect.Toolkit.Interaction.dll" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)bin\$(ConfigurationName)\$(TargetFileName)" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)*.ifd" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)*.png" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)*.jpg" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)*.wmv" "$(SolutionDir)OutputAssemblies\"
-xcopy /S /Y /i "$(ProjectDir)*.dax" "$(SolutionDir)OutputAssemblies\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /S /Y /i "$(ProjectDir)packages\Bespoke.Common.dll" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)packages\Bespoke.Common.Osc.dll" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)packages\KinectInteraction170_32.dll" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)packages\KinectInteraction170_64.dll" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)packages\Microsoft.Kinect.Toolkit.dll" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)packages\Microsoft.Kinect.Toolkit.Interaction.dll" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)bin\$(ConfigurationName)\$(TargetFileName)" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)*.ifd" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)*.png" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)*.jpg" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)*.wmv" "$(SolutionDir)KinectIA\"
+xcopy /S /Y /i "$(ProjectDir)*.dax" "$(SolutionDir)KinectIA\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
