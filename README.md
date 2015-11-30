@@ -43,6 +43,11 @@ If Composer is running during installation of the Kinect runtime, you must stop 
 
 See more information on our support webpage: [Using Microsoft Kinect in IntuiFace Composer](http://support.intuilab.com/kb/non-touch-interactive-devices/using-microsoftr-kinectr).
 
+-----
+
+Copyright &copy; 2015 IntuiLab.
+
+Released under the **MIT License**.
 
 
 
